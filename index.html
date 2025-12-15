@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido de Música</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background: #020617;
+      padding: 25px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+    }
+
+    input, textarea {
+      background: #1e293b;
+      color: #fff;
+    }
+
+    button {
+      background: #38bdf8;
+      color: #020617;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>🎶 Pedido de Música</h2>
+
+    <form action="https://formspree.io/f/xeoylkrg" method="POST">
+
+      <input type="text" name="nome" placeholder="Seu nome" required>
+
+      <input type="text" name="musica" placeholder="Nome da música" required>
+
+      <input type="text" name="artista" placeholder="Artista / Banda">
+
+      <textarea name="mensagem" rows="4" placeholder="Mensagem (opcional)"></textarea>
+
+      <!-- Email para resposta -->
+      <input type="email" name="_replyto" placeholder="Seu email (opcional)">
+
+      <button type="submit">Enviar Pedido</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
